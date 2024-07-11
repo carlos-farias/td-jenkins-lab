@@ -1,0 +1,10 @@
+commit a67a5c0f56ae714ae19333dd0e48629cc34e1950
+tree aaac306d2510791e36a83f97670d66afbc422871
+parent d99d847c9198a2a9b44d0922eb53e76cab14ab46
+author Carlos Farías <carlos@eflipa.com> 2024-07-10 20:38:35 -0400
+committer Carlos Farías <carlos@eflipa.com> 2024-07-10 20:38:35 -0400
+
+    Cambio el pom para que compile sin problemas
+
+
+:100644 100644 d7690fbd4213181ab9040176daa4a7cb7f133183 8c7d341325e7216af14842380b257bce2e46d6e6 M	pom.xml

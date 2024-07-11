@@ -1,0 +1,683 @@
+Started by user unknown or anonymous
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/TimeTracker2
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/TimeTracker2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/carlos-farias/time-tracker.git # timeout=10
+Fetching upstream changes from https://github.com/carlos-farias/time-tracker.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+ > git fetch --tags --force --progress -- https://github.com/carlos-farias/time-tracker.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/master^{commit} # timeout=10
+Checking out Revision d99d847c9198a2a9b44d0922eb53e76cab14ab46 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d99d847c9198a2a9b44d0922eb53e76cab14ab46 # timeout=10
+Commit message: "Update to SpringFramework 5.0.2"
+First time build. Skipping changelog.
+[TimeTracker2] $ mvn clean package
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Time Tracker (Parent)                                              [pom]
+[INFO] Time Tracker (Core)                                                [jar]
+[INFO] Time Tracker (Web)                                                 [war]
+[INFO] 
+[INFO] ----------< training.taylor.time-tracker:time-tracker-parent >----------
+[INFO] Building Time Tracker (Parent) 0.5.0-SNAPSHOT                      [1/3]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ time-tracker-parent ---
+[INFO] 
+[INFO] -----------< training.taylor.time-tracker:time-tracker-core >-----------
+[INFO] Building Time Tracker (Core) 0.5.0-SNAPSHOT                        [2/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ time-tracker-core ---
+[INFO] Deleting /var/jenkins_home/workspace/TimeTracker2/core/target
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ time-tracker-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TimeTracker2/core/src/main/resources
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ time-tracker-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /var/jenkins_home/workspace/TimeTracker2/core/target/classes
+[INFO] [parsing started SimpleFileObject[/var/jenkins_home/workspace/TimeTracker2/core/src/main/java/training/taylor/timetracker/core/Tracker.java]]
+[INFO] [parsing completed 20ms]
+[INFO] [parsing started SimpleFileObject[/var/jenkins_home/workspace/TimeTracker2/core/src/main/java/training/taylor/timetracker/core/TrackerCoreConfig.java]]
+[INFO] [parsing completed 1ms]
+[INFO] [parsing started SimpleFileObject[/var/jenkins_home/workspace/TimeTracker2/core/src/main/java/training/taylor/timetracker/core/dao/TimeEntry.java]]
+[INFO] [parsing completed 5ms]
+[INFO] [search path for source files: /var/jenkins_home/workspace/TimeTracker2/core/src/main/java,/var/jenkins_home/workspace/TimeTracker2/core/target/generated-sources/annotations]
+[INFO] [search path for class files: /opt/java/openjdk/lib/modules,/var/jenkins_home/workspace/TimeTracker2/core/target/classes,/var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar,.]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar(/org/springframework/beans/factory/annotation/Autowired.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/stereotype/Component.class)]
+[INFO] [loading /modules/java.base/java/util/List.class]
+[INFO] [loading /modules/java.base/java/lang/Object.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/Scope.class)]
+[INFO] [loading /modules/java.base/java/lang/String.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/Bean.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/ComponentScan.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/Configuration.class)]
+[INFO] [loading /modules/java.base/java/util/ArrayList.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Target.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/ElementType.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Retention.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/RetentionPolicy.class]
+[INFO] [loading /modules/java.base/java/lang/Deprecated.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Annotation.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar(/org/springframework/core/annotation/AliasFor.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/ScopedProxyMode.class)]
+[INFO] [loading /modules/java.base/java/lang/Override.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar(/org/springframework/beans/factory/annotation/Autowire.class)]
+[INFO] [loading /modules/java.base/java/lang/annotation/Repeatable.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/ComponentScan$Filter.class)]
+[INFO] [loading /modules/java.base/java/lang/Class.class]
+[INFO] [checking training.taylor.timetracker.core.Tracker]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/FilterType.class)]
+[INFO] [loading /modules/java.base/java/io/Serializable.class]
+[INFO] [loading /modules/java.base/java/lang/AutoCloseable.class]
+[INFO] [loading /modules/java.base/java/util/Collection.class]
+[INFO] [loading /modules/java.base/java/lang/Iterable.class]
+[INFO] [loading /modules/java.base/java/lang/Exception.class]
+[INFO] [loading /modules/java.base/java/lang/Throwable.class]
+[INFO] [loading /modules/java.base/java/lang/Error.class]
+[INFO] [loading /modules/java.base/java/lang/RuntimeException.class]
+[INFO] [wrote /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/Tracker.class]
+[INFO] [checking training.taylor.timetracker.core.dao.TimeEntry]
+[INFO] [loading /modules/java.base/java/lang/Byte.class]
+[INFO] [loading /modules/java.base/java/lang/Character.class]
+[INFO] [loading /modules/java.base/java/lang/Short.class]
+[INFO] [loading /modules/java.base/java/lang/Long.class]
+[INFO] [loading /modules/java.base/java/lang/Float.class]
+[INFO] [loading /modules/java.base/java/lang/Integer.class]
+[INFO] [loading /modules/java.base/java/lang/Double.class]
+[INFO] [loading /modules/java.base/java/lang/Boolean.class]
+[INFO] [loading /modules/java.base/java/lang/Void.class]
+[INFO] [loading /modules/java.base/java/lang/StringBuilder.class]
+[INFO] [loading /modules/java.base/java/lang/Comparable.class]
+[INFO] [loading /modules/java.base/java/lang/CharSequence.class]
+[INFO] [loading /modules/java.base/java/lang/AbstractStringBuilder.class]
+[INFO] [loading /modules/java.base/java/lang/Appendable.class]
+[INFO] [loading /modules/java.base/java/lang/StringBuffer.class]
+[INFO] [loading /modules/java.base/java/lang/constant/Constable.class]
+[INFO] [loading /modules/java.base/java/lang/constant/ConstantDesc.class]
+[INFO] [wrote /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/dao/TimeEntry.class]
+[INFO] [checking training.taylor.timetracker.core.TrackerCoreConfig]
+[INFO] [loading /modules/java.base/java/util/AbstractList.class]
+[INFO] [loading /modules/java.base/java/util/AbstractCollection.class]
+[INFO] [wrote /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/TrackerCoreConfig.class]
+[INFO] [total 646ms]
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ time-tracker-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/TimeTracker2/core/src/test/resources
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ time-tracker-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /var/jenkins_home/workspace/TimeTracker2/core/target/test-classes
+[INFO] [parsing started SimpleFileObject[/var/jenkins_home/workspace/TimeTracker2/core/src/test/java/training/taylor/timetracker/core/TrackerTest.java]]
+[INFO] [parsing completed 21ms]
+[INFO] [parsing started SimpleFileObject[/var/jenkins_home/workspace/TimeTracker2/core/src/test/java/training/taylor/timetracker/core/TrackerCoreConfigTest.java]]
+[INFO] [parsing completed 2ms]
+[INFO] [search path for source files: /var/jenkins_home/workspace/TimeTracker2/core/src/test/java,/var/jenkins_home/workspace/TimeTracker2/core/target/generated-test-sources/test-annotations]
+[INFO] [search path for class files: /opt/java/openjdk/lib/modules,/var/jenkins_home/workspace/TimeTracker2/core/target/test-classes,/var/jenkins_home/workspace/TimeTracker2/core/target/classes,/var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar,/var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar,/var/jenkins_home/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar,/var/jenkins_home/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar,.]
+[INFO] [loading /var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar(/org/junit/Assert.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar(/org/junit/Test.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar(/org/junit/runner/RunWith.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar(/org/springframework/beans/factory/annotation/Autowired.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar(/org/springframework/test/context/ContextConfiguration.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar(/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class)]
+[INFO] [loading /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/dao/TimeEntry.class]
+[INFO] [loading /modules/java.base/java/lang/Object.class]
+[INFO] [loading /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/Tracker.class]
+[INFO] [loading /modules/java.base/java/util/List.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Retention.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/RetentionPolicy.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Target.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/ElementType.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar(/org/springframework/core/annotation/AliasFor.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/Scope.class)]
+[INFO] [loading /modules/java.base/java/lang/Deprecated.class]
+[INFO] [loading /modules/java.base/java/lang/annotation/Annotation.class]
+[INFO] [loading /modules/java.base/java/lang/Class.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar(/org/junit/runners/BlockJUnit4ClassRunner.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/junit/junit/4.12/junit-4.12.jar(/org/junit/runners/ParentRunner.class)]
+[INFO] [loading /var/jenkins_home/workspace/TimeTracker2/core/target/classes/training/taylor/timetracker/core/TrackerCoreConfig.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/ScopedProxyMode.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/ComponentScan.class)]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar(/org/springframework/context/annotation/Bean.class)]
+[INFO] [loading /modules/java.base/java/lang/annotation/Repeatable.class]
+[INFO] [loading /var/jenkins_home/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar(/org/springframework/beans/factory/annotation/Autowire.class)]
+[INFO] [loading /modules/java.base/java/lang/String.class]
+[INFO] [checking training.taylor.timetracker.core.TrackerTest]
+[INFO] [loading /modules/java.base/java/io/Serializable.class]
+[INFO] [loading /modules/java.base/java/lang/AutoCloseable.class]
+[INFO] [wrote /var/jenkins_home/workspace/TimeTracker2/core/target/test-classes/training/taylor/timetracker/core/TrackerTest.class]
+[INFO] [checking training.taylor.timetracker.core.TrackerCoreConfigTest]
+[INFO] [wrote /var/jenkins_home/workspace/TimeTracker2/core/target/test-classes/training/taylor/timetracker/core/TrackerCoreConfigTest.class]
+[INFO] [total 689ms]
+[INFO] 
+[8mha:////4EOhG9AbBWTkVOnFxTyi+XvlfHFriFRkJaxOZHNa95S8AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ time-tracker-core ---
+[INFO] Surefire report directory: /var/jenkins_home/workspace/TimeTracker2/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running training.taylor.timetracker.core.TrackerCoreConfigTest
+Jul 10, 2024 8:22:10 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Jul 10, 2024 8:22:10 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+Jul 10, 2024 8:22:10 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+Jul 10, 2024 8:22:10 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/TransactionDefinition]
+Jul 10, 2024 8:22:10 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@188715b5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ea9f6af, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a192cfe]
+Jul 10, 2024 8:22:10 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@1623b78d: startup date [Wed Jul 10 20:22:10 CLT 2024]; root of context hierarchy
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ea9f6af] to prepare test instance [training.taylor.timetracker.core.TrackerCoreConfigTest@376a0d86]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.setAccessible(Unknown Source)
+	at org.springframework.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.springframework.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:52)
+	at org.springframework.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:329)
+	... 57 more
+
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.933 sec <<< FAILURE!
+testMe(training.taylor.timetracker.core.TrackerCoreConfigTest)  Time elapsed: 0.015 sec  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.ExceptionInInitializerError
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.setAccessible(Unknown Source)
+	at org.springframework.cglib.core.ReflectUtils$1.run(ReflectUtils.java:61)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.springframework.cglib.core.ReflectUtils.<clinit>(ReflectUtils.java:52)
+	at org.springframework.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:243)
+	at org.springframework.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:329)
+	... 57 more
+
+Running training.taylor.timetracker.core.TrackerTest
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+INFO: Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/TransactionDefinition]
+Jul 10, 2024 8:22:11 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13df2a8c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ebea008, org.springframework.test.context.support.DirtiesContextTestExecutionListener@72d6b3ba]
+Jul 10, 2024 8:22:11 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@1787f2a0: startup date [Wed Jul 10 20:22:11 CLT 2024]; root of context hierarchy
+Jul 10, 2024 8:22:12 PM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ebea008] to prepare test instance [training.taylor.timetracker.core.TrackerTest@452e19ca]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.springframework.cglib.proxy.Enhancer
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9 [in thread "main"]
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+
+Jul 10, 2024 8:22:12 PM org.springframework.context.support.AbstractApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@e25951c: startup date [Wed Jul 10 20:22:12 CLT 2024]; root of context hierarchy
+Jul 10, 2024 8:22:12 PM org.springframework.test.context.TestContextManager prepareTestInstance
+SEVERE: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ebea008] to prepare test instance [training.taylor.timetracker.core.TrackerTest@43015c69]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.springframework.cglib.proxy.Enhancer
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9 [in thread "main"]
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.333 sec <<< FAILURE!
+testAdd(training.taylor.timetracker.core.TrackerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.springframework.cglib.proxy.Enhancer
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9 [in thread "main"]
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+
+testMe(training.taylor.timetracker.core.TrackerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:107)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:242)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.IllegalStateException: Cannot load configuration class: training.taylor.timetracker.core.TrackerCoreConfig
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:416)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanFactory(ConfigurationClassPostProcessor.java:254)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:284)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:246)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 31 more
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.springframework.cglib.proxy.Enhancer
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.newEnhancer(ConfigurationClassEnhancer.java:122)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer.enhance(ConfigurationClassEnhancer.java:110)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.enhanceConfigurationClasses(ConfigurationClassPostProcessor.java:405)
+	... 42 more
+Caused by: java.lang.ExceptionInInitializerError: Exception org.springframework.cglib.core.CodeGenerationException: java.lang.reflect.InaccessibleObjectException-->Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @7823a2f9 [in thread "main"]
+	at org.springframework.cglib.core.ReflectUtils.defineClass(ReflectUtils.java:464)
+	at org.springframework.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java:336)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:93)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData$3.apply(AbstractClassGenerator.java:91)
+	at org.springframework.cglib.core.internal.LoadingCache$2.call(LoadingCache.java:54)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.springframework.cglib.core.internal.LoadingCache.createEntry(LoadingCache.java:61)
+	at org.springframework.cglib.core.internal.LoadingCache.get(LoadingCache.java:34)
+	at org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData.get(AbstractClassGenerator.java:116)
+	at org.springframework.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:291)
+	at org.springframework.cglib.core.KeyFactory$Generator.create(KeyFactory.java:221)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:174)
+	at org.springframework.cglib.core.KeyFactory.create(KeyFactory.java:153)
+	at org.springframework.cglib.proxy.Enhancer.<clinit>(Enhancer.java:73)
+	... 45 more
+
+
+Results :
+
+Tests in error: 
+  testMe(training.taylor.timetracker.core.TrackerCoreConfigTest): Failed to load ApplicationContext
+  testAdd(training.taylor.timetracker.core.TrackerTest): Failed to load ApplicationContext
+  testMe(training.taylor.timetracker.core.TrackerTest): Failed to load ApplicationContext
+
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Time Tracker (Parent) 0.5.0-SNAPSHOT:
+[INFO] 
+[INFO] Time Tracker (Parent) .............................. SUCCESS [  0.525 s]
+[INFO] Time Tracker (Core) ................................ FAILURE [ 10.730 s]
+[INFO] Time Tracker (Web) ................................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.483 s
+[INFO] Finished at: 2024-07-10T20:22:12-04:00
+[INFO] ------------------------------------------------------------------------
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project time-tracker-core: There are test failures.
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Please refer to /var/jenkins_home/workspace/TimeTracker2/core/target/surefire-reports for the individual test results.
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] -> [Help 1]
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] After correcting the problems, you can resume the build with the command
+[8mha:////4PeJHu2jibV4jr3YmrLf019dp/0xIHRkhXhEFIIWBKyeAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR]   mvn <args> -rf :time-tracker-core
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

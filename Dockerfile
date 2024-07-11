@@ -26,8 +26,7 @@ RUN apt-get update && \
     apt-get install -y docker.io
 
 # Add Jenkins to Docker group
-RUN groupadd -g 999 docker && \
-    usermod -aG docker jenkins
+RUN usermod -aG docker jenkins
 
 ENV MAVEN_HOME=/opt/apache-maven-3.6.3
 
