@@ -1,5 +1,7 @@
 FROM jenkins/jenkins:lts-jdk17
 USER root
+
+# Install necessary packages and tools
 RUN apt-get update && \
     apt-get install -y curl && \
     curl https://baltocdn.com/helm/signing.asc | apt-key add - && \
@@ -22,6 +24,10 @@ RUN curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases
 # Install Docker client
 RUN apt-get update && \
     apt-get install -y docker.io
+
+# Add Jenkins to Docker group
+RUN groupadd -g 999 docker && \
+    usermod -aG docker jenkins
 
 ENV MAVEN_HOME=/opt/apache-maven-3.6.3
 
