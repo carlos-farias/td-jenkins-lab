@@ -19,6 +19,10 @@ RUN curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases
     install -m 555 argocd-linux-amd64 /usr/local/bin/argocd && \
     rm argocd-linux-amd64
 
+# Install Docker client
+RUN apt-get update && \
+    apt-get install -y docker.io
+
 ENV MAVEN_HOME=/opt/apache-maven-3.6.3
 
 ENV JAVA_OPTS="-Dhudson.udp=-1 -Djava.awt.headless=true -Dhudson.DNSMultiCast.disabled=true -Djenkins.install.runSetupWizard=false -Dhudson.security.csrf.CrumbFilter=severe"
@@ -26,7 +30,7 @@ ENV JAVA_OPTS="-Dhudson.udp=-1 -Djava.awt.headless=true -Dhudson.DNSMultiCast.di
 ENV JENKINS_OPTS="--argumentsRealm.roles.user=admin --argumentsRealm.passwd.admin=admin --argumentsRealm.roles.admin=admin"
 
 RUN jenkins-plugin-cli --plugins \
-    docker-build-publish:latest \ 
+    docker-build-publish:latest \
     pipeline-groovy-lib:latest \
     junit:latest \
     workflow-scm-step:latest \
@@ -124,5 +128,5 @@ RUN jenkins-plugin-cli --plugins \
 
 ENV TZ=America/Santiago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-    
+
 USER jenkins
